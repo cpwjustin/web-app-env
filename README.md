@@ -21,29 +21,38 @@ Full-stack job search application with React, Django REST, PostgreSQL, all conta
 **You DON'T need:** Python, Node.js, PostgreSQL, or any packages. Docker handles everything.
 
 ---
-
-## Quick Start (5 minutes)
+### First-Time Setup (5 minutes)
 
 ```bash
-# 1. Clone repo
+# 1. Clone the repository
 git clone <repository-url>
 cd everify-job-search
 
-# 2. Open Docker Desktop (wait until running)
+# 2. Start Docker Desktop application
+# Wait until you see "Docker Desktop is running"
 
-# 3. Build and start
+# 3. Build containers (takes 2-3 minutes first time)
 docker compose build
+
+# 4. Start all services
 docker compose up -d
 
-# 4. Setup database
+# 5. Create database tables
 docker compose exec backend python manage.py migrate
-docker compose exec backend python manage.py createsuperuser
 
-# 5. Access the app
-# Frontend: http://localhost:5173
-# API Docs: http://localhost:8000/swagger/
-# Admin: http://localhost:8000/admin/
+# 6. Create admin user
+docker compose exec backend python manage.py createsuperuser
+# Enter username, email (optional), and password
+
+# 7. Verify everything works
+# Open browser and visit:
+# - Frontend: http://localhost:5173
+# - Backend API: http://localhost:8000/swagger/
+# - Admin Panel: http://localhost:8000/admin/
+
 ```
+
+**✅ You're ready to code!**
 
 ---
 
