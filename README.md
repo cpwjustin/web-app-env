@@ -1,4 +1,4 @@
-# everify-job-search - Developer Guide
+# Developer Guide
 
 ## Quick Overview
 
